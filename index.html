@@ -5,9 +5,11 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.js"></script>
         <script type="text/javascript" src="js/modules.js"></script>
+        <script type="text/javascript" src="js/slideshow.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="author" content="Tero Hannula" />
         <link rel="stylesheet" href="styles/assignment.css" type="text/css" />
+        <link rel="stylesheet" href="styles/slideshow.css" type="text/css" />
     </head>
     <body data-ng-app="app" data-ng-controller="mainCtrl">
 
@@ -20,30 +22,33 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#!">home</a>
+                        <a ng-class="{'selected':getSelected('home')}" ng-click="setSelected('home')" href="#/!">home</a>
                     </li>
                     <li>
-                        <a href="#!projects">projects</a>
+                        <a ng-class="{'selected':getSelected('projects')}" ng-click="setSelected('projects')" href="#!projects">projects</a>
                     </li>
                     <li>
-                        <a href="#!skills">Skills</a>
+                        <a ng-class="{'selected':getSelected('skills')}" ng-click="setSelected('skills')" href="#!skills">skills</a>
                     </li>
                     <li>
-                        <a href="#!links">Links</a>
+                        <a ng-class="{'selected':getSelected('links')}" ng-click="setSelected('links')" href="#!links">links</a>
                     </li>
                     <li>
-                        <a href="#!contact">Contact</a>
+                        <a ng-class="{'selected':getSelected('gallery')}" ng-click="setSelected('gallery')" href="#!gallery">gallery</a>
+                    </li>
+                    <li>
+                        <a ng-class="{'selected':getSelected('contact')}" ng-click="setSelected('contact')" href="#!contact">contact</a>
                     </li>
                 </ul>
             </nav>
 
             <!-- content box, subpages will be shown here -->
 
-            <div ng-view id="contentbox" ></div>
+            <div data-ng-view id="contentbox" ></div>
     
             <!-- footer -->
             
-            <footer id="footer" ng-controller='TimeCtrl'>
+            <footer id="footer">
                 <p>{{ clock | date:'dd.MM.yyyy HH:mm:ss'}}</p>
             </footer>
 

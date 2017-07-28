@@ -8,40 +8,45 @@ background: radial-gradient(ellipse at center, rgba(238,238,238,1) 0%,rgba(204,2
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */   /* background-color:  rgb(220,220,220); */
 }
 
+body {
+    margin: 0;
+}
+
 #mainbox {
     position: relative;
-    margin: 5rem auto 0 auto;
-    width: 80%;
+    margin: 0 auto 0 auto;
 }
+
 nav {
     margin-top: 5rem;
-    float: left;
-    width: 15rem;
     min-width: 15rem;
     font-size: 3.5rem;
-    height: 50rem;
+    border-bottom: 2px ridge #f6f6f6;
 }
 
 #contentbox {
-    float: left;
-    background-color: grey;
+    background-color: rgba(0,0,0,0);
     color: white;
-    width: 79%;
+    margin-bottom: 5rem;
+}
+
+.partial {
+    margin-top: 5rem;
+    background-color: rgba(0,0,0,0);
+    height: 30rem;
 }
 
 footer {
-background: -moz-linear-gradient(left, rgba(201,201,201,0) 0%, rgba(200,200,201,0) 1%, rgba(135,132,226,0.9) 50%, rgba(134,131,226,0.88) 51%, rgba(221,221,221,0) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, rgba(201,201,201,0) 0%,rgba(200,200,201,0) 1%,rgba(135,132,226,0.9) 50%,rgba(134,131,226,0.88) 51%,rgba(221,221,221,0) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, rgba(201,201,201,0) 0%,rgba(200,200,201,0) 1%,rgba(135,132,226,0.9) 50%,rgba(134,131,226,0.88) 51%,rgba(221,221,221,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c9c9c9', endColorstr='#00dddddd',GradientType=1 ); /* IE6-9 */   height: 2.5rem;
-    clear: left;
+    border-top: 2px ridge #f6f6f6;
+    width: 100%;
+
 }
 
 footer p {
     text-align: center;
-    padding-top: 0.5%;
-    color: white;
+    color: #9f9f9f;
     font-size: 1.4rem;
+    padding-top: 0.2rem;
 }
 
 ul {
@@ -49,18 +54,15 @@ ul {
     text-transform: uppercase;
     font-family: "Impact";
     font-size: 1.6rem;
-    padding: 2rem;
-    border-right: 2px ridge #f6f6f6;
 }
 
 ul li {
     margin-bottom: 1rem;
-    display: block;
+    display: inline;
 }
 
 ul a {
     padding: 0.5rem 2rem;
-    display: block;
 }
 
 ul a:link {
@@ -81,7 +83,7 @@ ul a:active {
     color: rgb(230,230,230);
 } 
 
-ul a:selected {
-    background-color: rgb(100,100,100);
+ul a.selected {
+    background-color: rgb(170,80,250);
     color: rgb(230,230,230);
 } 
