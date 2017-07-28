@@ -144,3 +144,21 @@ textarea.description {
     border: none;
     overflow-y: visible;
 }
+
+.face {
+    width: 60rem;
+    float: left;
+    margin-right: 3rem;
+}
+
+.info {
+    font-size: 1.6rem;
+    font-family: 'Courier New';
+    color: rgb(130,130,130);
+    margin-right: 2rem;
+}
+
+ p {
+    margin-left: 3rem;
+
+}
