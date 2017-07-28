@@ -28,10 +28,6 @@ assignment_module.config(['$routeProvider', function($routeProvider) {
 				templateUrl : "contact.html"
 			})
 
-			.when("/links", {
-				templateUrl : "links.html"
-			})
-
 			.when("/gallery", {
 				templateUrl : "gallery.html"
 			})
@@ -120,4 +116,24 @@ assignment_module.controller("mainCtrl", ['$scope', '$interval', function($scope
 			return false;
 	}
 
+	
 }]);
+
+// Non-AngularJS functions
+
+var scrolled = function() {
+	document.getElementById("scrolled").style.color="rgb(130,130,130)";
+	window.setTimeout(scrolledOff, 100);
+}
+
+var scrolledOff = function() {
+	document.getElementById("scrolled").style.color="rgb(210,210,210)";
+}
+
+var firstprojectIn = function() {
+	document.getElementById("first").style.color="rgb(130,130,130)";
+}
+
+var firstprojectOut = function() {
+	document.getElementById("first").style.color="rgb(210,210,210)";
+}
