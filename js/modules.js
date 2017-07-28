@@ -2,6 +2,8 @@
 
 var assignment_module = angular.module('app', ['ngRoute']);
 
+// configure routes for navigation
+
 assignment_module.config(function($routeProvider) {
 		$routeProvider.when('/', {
 				templateUrl : 'index.html',
@@ -24,7 +26,14 @@ assignment_module.config(function($routeProvider) {
 			});
     });
         
+
+
     assignment_module.controller("mainCtrl", ['$scope', function($scope) {
+        
+/*     var date = new Date();
+    $scope.footerDate = date.toString; */
+    
 
-
+    
+    
    }]);

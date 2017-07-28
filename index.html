@@ -2,15 +2,21 @@
 <html>
     <head>
         <title>Assignment</title>
-        <script src="js/assignment.js" defer />
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js" />
-        <script type="text/javascript" src="js/modules.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.min.js"></script>
+        <!-- <script type="text/javascript" src="js/modules.js"></script> -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="author" content="Tero Hannula" />
         <link rel="stylesheet" href="styles/assignment.css" type="text/css" />
     </head>
-    <body data-ng-app="app">
+    <body data-ng-app="app" data-ng-controller="mainCtrl">
+
+        <!-- main app box -->
+
         <div id="mainbox">
+
+            <!-- navigation -->
+
             <nav>
                 <ul>
                     <li class="selectedtool">
@@ -26,15 +32,27 @@
                         <a href="#/projects">Projects</a>
                     </li>
                     <li>
+                        <a href="#/links">Links</a>
+                    </li>
+                    <li>
                         <a href="#/contact">Contact</a>
                     </li>
                 </ul>
             </nav>
+
+            <!-- content box -->
+
             <div id="contentbox">
                 <ng-view></ng-view>
             </div>
-            <footer>
+
+            <!-- footer -->
+            
+            <footer id="footer">
+                <p>{{footerDate}}</p>
             </footer>
-        </div>
+
+        </div> <!-- end of mainbox -->
+        
     </body>
 </html>
