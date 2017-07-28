@@ -76,4 +76,44 @@ assignment_module.controller("mainCtrl", ['$scope', '$interval', function($scope
 		
 	}
 
+	// Skill list functions
+
+	$scope.skilllevels = [
+		{level: 1, description: "Professional, over 3 years"}, 
+		{level: 2, description: "Practical experience under 3 years"}, 
+		{level: 3, description: "Learning the subject"}
+	];
+
+	$scope.newskill = {
+			name: "",
+			level: ""
+		};
+
+	$scope.skills = [
+		{
+			name: "Taito 1",
+			level: $scope.skilllevels[0].description
+		},
+		{
+			name: "Taito 2",
+			level: $scope.skilllevels[1].description
+		}
+	];
+
+	// This function adds only predefined skill descriptions to the array of skills
+
+	$scope.addSkill = function() {
+
+		var skillname=$scope.newskill.name;
+		var skilllevel=$scope.newskill.level;
+		console.log("lisää " + skillname + ", " + $scope.newskill.level);
+
+		$scope.skills.unshift({name: skillname, level: skilllevel});
+		if($scope.skills.length > 5) {
+			$scope.skills.pop();
+		}
+	}
+
+
+
 }]);

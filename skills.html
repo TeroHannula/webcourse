@@ -1,3 +1,14 @@
 <article class="partial">
-    <h1>Skills</h1>
+    <div id="skillcontainer">
+        <input type="text" name="newskillName" maxlength="30" ng-model="newskill.name" />
+        <select ng-options="skill.description as ''+skill.description for skill in skilllevels" ng-model="newskill.level">
+        </select>
+
+        <input type="button" value="add skill" ng-click="addSkill()" />
+
+        <table id="skills" class="grey mediumtext">
+            <tr ng-repeat="skill in skills track by $index"><td>{{ skill.name }}</td><td class="skillname">{{skill.level}}</td></tr>
+        </table>
+    </div>
+
 </article>

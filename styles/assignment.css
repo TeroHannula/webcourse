@@ -1,11 +1,11 @@
 html {
     font-size: 62.5%;
     background: rgb(242,245,246); /* Old browsers */
-background: rgb(238,238,238); /* Old browsers */
-background: -moz-radial-gradient(center, ellipse cover, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */   /* background-color:  rgb(220,220,220); */
+    background: rgb(238,238,238); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */   /* background-color:  rgb(220,220,220); */
 }
 
 body {
@@ -49,6 +49,19 @@ footer p {
     padding-top: 0.2rem;
 }
 
+.grey {
+    color: rgb(100,100,100);
+}
+
+.skillname {
+    padding-left: 2rem;
+}
+
+.mediumtext {
+    font-size: 1.7rem;
+    font-family: 'Roboto';
+}
+
 ul {
     list-style-type: none;
     text-transform: uppercase;
@@ -56,7 +69,7 @@ ul {
     font-size: 1.6rem;
 }
 
-ul li {
+ul.horizontal li {
     display: inline;
 }
 
@@ -86,3 +99,18 @@ ul a.selected {
     background-color: rgb(170,80,250);
     color: rgb(230,230,230);
 } 
+
+#skills {
+    margin-top: 3rem;
+}
+
+#skillcontainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50rem;
+    padding-left: 10rem;
+}
+
+skills ul li {
+    display: block;
+}
