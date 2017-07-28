@@ -78,25 +78,23 @@ assignment_module.controller("mainCtrl", ['$scope', '$interval', function($scope
 
 	// Skill list functions
 
-	$scope.skilllevels = [
-		{level: 1, description: "Professional, over 3 years"}, 
-		{level: 2, description: "Practical experience under 3 years"}, 
-		{level: 3, description: "Learning the subject"}
-	];
-
 	$scope.newskill = {
-			name: "",
-			level: ""
+			description: "",
+			imageurl: ""
 		};
 
 	$scope.skills = [
 		{
-			name: "Taito 1",
-			level: $scope.skilllevels[0].description
+			description: "After going through all kind of sinful jobs, I decided to go and be a priest for a change.",
+			imageurl: "https://www.ncronline.org/sites/default/files/styles/article_slideshow/public/stories/images/thumbRNS-PRIEST-SUSPENDED090116.jpg?itok=wxRSG7-h"
 		},
 		{
-			name: "Taito 2",
-			level: $scope.skilllevels[1].description
+			description: "I'm well educated and experienced multi-skilled car washer. I've been doing this since 1968.",
+			imageurl: "http://cdn.xl.thumbs.canstockphoto.com/canstock20491718.jpg"
+		},
+		{
+			description: "My first long term job as a shavel man in various international projects.",
+			imageurl: "http://omg.wthax.org/Senior_man_holding_shovel_JUF08047.jpg"
 		}
 	];
 
@@ -104,14 +102,15 @@ assignment_module.controller("mainCtrl", ['$scope', '$interval', function($scope
 
 	$scope.addSkill = function() {
 
-		var skillname=$scope.newskill.name;
-		var skilllevel=$scope.newskill.level;
-		console.log("lisää " + skillname + ", " + $scope.newskill.level);
-
-		$scope.skills.unshift({name: skillname, level: skilllevel});
+		var description=$scope.newskill.description;
+		var imageurl=$scope.newskill.imageurl;
+		console.log("" + description +", " + imageurl);
+		$scope.skills.unshift({description: description, imageurl: imageurl});
 		if($scope.skills.length > 5) {
 			$scope.skills.pop();
 		}
+		$scope.newskill.description = "";
+		$scope.newskill.imageurl = "";
 	}
 
 

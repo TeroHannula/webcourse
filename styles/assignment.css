@@ -19,6 +19,7 @@ body {
 
 nav {
     margin-top: 5rem;
+    margin: 5rem 1rem 0 1rem;
     min-width: 15rem;
     font-size: 3.5rem;
     border-bottom: 2px ridge #f6f6f6;
@@ -38,8 +39,7 @@ nav {
 
 footer {
     border-top: 2px ridge #f6f6f6;
-    width: 100%;
-
+    margin: 0rem 1rem 0 1rem;
 }
 
 footer p {
@@ -101,7 +101,7 @@ ul a.selected {
 } 
 
 #skills {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 #skillcontainer {
@@ -109,6 +109,28 @@ ul a.selected {
     margin-right: auto;
     width: 50rem;
     padding-left: 10rem;
+}
+
+#skillcontainer p {
+    font-size: 1.3rem;
+
+}
+
+#skillcontainer input {
+    float: right;
+    position: relative;
+    bottom: 4rem;
+    left: 7rem;
+    font-size: 1.4rem;
+}
+
+#skillcontainer img {
+    width: 15rem;
+}
+
+#skillcontainer table {
+    height: 20rem;
+    overflow-y: scroll;
 }
 
 skills ul li {
