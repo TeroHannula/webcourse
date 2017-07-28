@@ -93,7 +93,7 @@ assignment_module.controller("mainCtrl", ['$scope', '$interval', function($scope
 			imageurl: "http://cdn.xl.thumbs.canstockphoto.com/canstock20491718.jpg"
 		},
 		{
-			description: "My first long term job as a shavel man in various international projects.",
+			description: "My first long term job was a shavel man in various international projects.",
 			imageurl: "http://omg.wthax.org/Senior_man_holding_shovel_JUF08047.jpg"
 		}
 	];
@@ -113,6 +113,11 @@ assignment_module.controller("mainCtrl", ['$scope', '$interval', function($scope
 		$scope.newskill.imageurl = "";
 	}
 
-
+	$scope.readyToPublish = function() {
+		if($scope.newskill.description.length > 0)
+			return true;
+		else
+			return false;
+	}
 
 }]);

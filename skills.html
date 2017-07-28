@@ -1,11 +1,13 @@
 <article class="partial">
     <div id="skillcontainer">
-        <p class="grey" >See my CV in <a href="https://drive.google.com/file/d/0B9yzjTwlOq3FZkRlNldtYi0xVkU/view?usp=sharing">pdf</a> or <a href="https://drive.google.com/file/d/0B9yzjTwlOq3Fal9yVTZtN2JvUjg/view?usp=sharing">docx</a></p>
+        <p class="grey" >See my CV in <a href="https://drive.google.com/file/d/0B9yzjTwlOq3FZkRlNldtYi0xVkU/view?usp=sharing">pdf</a> 
+            or <a href="https://drive.google.com/file/d/0B9yzjTwlOq3Fal9yVTZtN2JvUjg/view?usp=sharing">docx</a>. Below is shown a list of my 5 most recent jobs.
+        </p>
         <textarea ng-model="newskill.description" maxlength=300 rows=4 cols=30 placeholder="write a new skill..."></textarea>
         <textarea ng-model="newskill.imageurl" maxlength=300 rows=4 cols=30 placeholder="enter image url"></textarea>
-        <input type="button" value="add skill" ng-click="addSkill()" />
+        <input type="button" value="add skill" ng-show="readyToPublish()" ng-click="addSkill()" />
         <table id="skills" class="grey mediumtext" rowcount=5 colcount=2>
-            <tr ng-repeat="skill in skills track by $index"><td>{{ skill.description }}</td><td class="skillname"><img src="{{skill.imageurl}}" /></td></tr>
+            <tr ng-repeat="skill in skills track by $index"><td><textarea class="description">{{ skill.description }}</textarea></td><td class="skillname"><img src="{{skill.imageurl}}" /></td></tr>
         </table>
     </div>
 
