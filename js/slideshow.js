@@ -29,4 +29,4 @@ document.querySelector('.prev').addEventListener('click', function() {
      showCurrent();
   }, false);
   
-})(); 
+})();

@@ -1,3 +1,44 @@
-<article class="partial">
-    <h1>Contact</h1>
+<article class="partial" id="contact">
+    <form action="" name="contactform" method="POST" ng-submit="formhandler($event)">
+        <table>
+            <tr>
+                <td>
+                    <input type="text" name="firstname" ng-model="formfirstname" maxlength=25 placeholder="firstname" required /></td>
+                <td>
+                    <input type="text" name="lastname" ng-model="formlastname" maxlength=25 placeholder="lastname" required /></td></tr>
+            <tr>
+                <td>
+                    <select ng-model="formsex" ng-options="gender for gender in genders" ng-init="gender='male'"></select></td>
+                <td>
+                    <input type="text" name="age" ng-model="formage" size=5 length=3 maxlength=2 placeholder="age" required /></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="email" name="email" ng-model="formemail" maxlength=50 placeholder="email" required validate /></td>
+                <td>
+                    <input type="url" name="website" ng-model="formsite" maxlength=50 placeholder="your website url" required validate /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea ng-model="formcomment" placeholder="write a comment if you so wish"></textarea></td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <input type="reset" ng-click="setFormSent(false)" value="clear all" /></td>
+                <td>
+                    <input type="submit" value="send" /></td></tr></table>
+    </form>
+    <section id="sentform" class="grey" ng-show="isFormSent()">
+        <p>Thank you!<br>Now, please print this contact form on paper and send it
+            to me using snailmail. My address is:</p>
+        <p>Tero Hannula<br>
+            P.O.Box 23144, Helsinki</p>
+        <p>In Finland we call this &#34;reilu meininki&#34;.</p>
+        
+        <p>Just to remind you about your information:</p>
+        <p class="remind">{{formfirstname}} {{formlastname}}<br> 
+            {{formsex}}, {{formage}} years,<br> 
+            {{formemail}}, {{formsite}}</p>
+        <p class="remind">{{formcomment}}</p>
+
 </article>

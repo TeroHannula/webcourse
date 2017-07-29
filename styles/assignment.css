@@ -34,7 +34,7 @@ nav {
 .partial {
     margin-top: 5rem;
     background-color: rgba(0,0,0,0);
-    max-height: 50rem;
+    max-height: 70rem;
     overflow-y: scroll;
 }
 
@@ -191,4 +191,36 @@ article.projects p {
     font-family: "Courier New";
     font-size: 1.2rem;
     color: rgb(210,210,210);
+}
+
+#contact {
+    font-size: 1.6rem;
+    font-family: "Courier New";
+    color: rgb(130,130,170);
+}
+
+#contact input, #contact select, #contact textarea, #contact option {
+    font-size: 2.0rem;
+}
+
+#contact textarea {
+    height: 10rem;
+    width: 99%;
+    margin-bottom: 1rem;
+}
+
+#contact table {
+    margin-left: auto;
+    margin-right: auto;
+}
+.remind {
+    color: rgb(100,100,170);
+
+}
+
+#sentform {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 4rem;
 }

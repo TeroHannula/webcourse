@@ -109,17 +109,37 @@ assignment_module.controller("mainCtrl", ['$scope', '$interval', function($scope
 		$scope.newskill.imageurl = "";
 	}
 
-	$scope.readyToPublish = function() {
+	$scope.isReadyToPublish = function() {
 		if($scope.newskill.description.length > 0)
 			return true;
 		else
 			return false;
 	}
 
-	
+	// form sending functions
+
+	$scope.formSent = false;
+
+	$scope.genders = ["male", "female", "twisted"];
+	$scope.formsex = $scope.genders[0];
+
+	$scope.formhandler = function(event) {
+		event.preventDefault();
+		$scope.formSent = true;
+		return false;	// don't actually submit
+	}
+
+	$scope.setFormSent = function(value) {
+		$scope.formSent = value;
+	}
+
+	$scope.isFormSent = function() {
+		return $scope.formSent;
+	}
+
 }]);
 
-// Non-AngularJS functions
+// Non-AngularJS functions for scroll and mouseover events in projects page
 
 var scrolled = function() {
 	document.getElementById("scrolled").style.color="rgb(130,130,130)";
