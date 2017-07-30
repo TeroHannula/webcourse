@@ -1,3 +1,7 @@
+/*
+    assignments.css - The stylesheet for the webcourse project
+*/
+
 html {
     font-size: 62.5%;
     background: rgb(242,245,246); /* Old browsers */
@@ -31,13 +35,6 @@ nav {
     margin-bottom: 5rem;
 }
 
-.partial {
-    margin-top: 5rem;
-    background-color: rgba(0,0,0,0);
-    max-height: 70rem;
-    overflow-y: scroll;
-}
-
 footer {
     border-top: 2px ridge #f6f6f6;
     margin: 0rem 1rem 0 1rem;
@@ -48,6 +45,52 @@ footer p {
     color: #9f9f9f;
     font-size: 1.4rem;
     padding-top: 0.2rem;
+}
+
+/* page specific rules */
+
+article#projects {
+    text-align: center;
+    font-family: "Impact";
+    font-size: 1.7rem;
+    color: rgb(130,130,130);
+}
+
+article#projects p {
+    margin-top: 5rem;
+}
+
+#skills {
+    margin-top: 2rem;
+}
+
+#contact {
+    font-size: 1.6rem;
+    font-family: "Courier New";
+    color: rgb(130,130,170);
+}
+
+#contact input, #contact select, #contact textarea, #contact option {
+    font-size: 2.0rem;
+}
+
+#contact textarea {
+    height: 10rem;
+    width: 99%;
+    margin-bottom: 1rem;
+}
+
+#contact table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* generic style for all AngularJS partial files */
+.partial {
+    margin-top: 5rem;
+    background-color: rgba(0,0,0,0);
+    max-height: 70rem;
+    overflow-y: scroll;
 }
 
 .grey {
@@ -101,10 +144,6 @@ ul a.selected {
     color: rgb(230,230,230);
 } 
 
-#skills {
-    margin-top: 2rem;
-}
-
 #skillcontainer {
     margin-left: auto;
     margin-right: auto;
@@ -129,10 +168,6 @@ ul a.selected {
 
 #skillcontainer img {
     width: 15rem;
-}
-
-skills ul li {
-    display: block;
 }
 
 textarea.description {
@@ -163,58 +198,18 @@ textarea.description {
     margin-left: 3rem;
 }
 
-article.projects {
-    text-align: center;
-    font-family: "Impact";
-    font-size: 1.7rem;
-    color: rgb(130,130,130);
-}
+.remind {
+    color: rgb(100,100,170);
 
-article.projects p {
-    margin-top: 5rem;
-}
-
-#scrolled {
-    position: fixed;
-    top: 5rem;
-    right: 1rem;
-    font-family: "Courier New";
-    font-size: 1.2rem;
-    color: rgb(210,210,210);
 }
 
 #first {
     position:   fixed;
     top: 4rem;
-    right: 1rem;
+    right: 2rem;
     font-family: "Courier New";
     font-size: 1.2rem;
     color: rgb(210,210,210);
-}
-
-#contact {
-    font-size: 1.6rem;
-    font-family: "Courier New";
-    color: rgb(130,130,170);
-}
-
-#contact input, #contact select, #contact textarea, #contact option {
-    font-size: 2.0rem;
-}
-
-#contact textarea {
-    height: 10rem;
-    width: 99%;
-    margin-bottom: 1rem;
-}
-
-#contact table {
-    margin-left: auto;
-    margin-right: auto;
-}
-.remind {
-    color: rgb(100,100,170);
-
 }
 
 #sentform {
@@ -222,4 +217,13 @@ article.projects p {
     margin-right: auto;
     width: 50%;
     margin-top: 4rem;
+}
+
+#scrolled {
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+    font-family: "Courier New";
+    font-size: 1.2rem;
+    color: rgb(210,210,210);
 }

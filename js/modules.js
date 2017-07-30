@@ -38,14 +38,17 @@ assignment_module.config(['$routeProvider', function($routeProvider) {
 
 			.otherwise({
                     redirectTo: "/"
-            });
+			});
+				
     }]);
 
 
 
 // The only controller in this app
 
-assignment_module.controller("mainCtrl", ['$scope', '$interval', function($scope, $interval) {
+assignment_module.controller("mainCtrl", ['$scope', '$interval', '$route', function($scope, $interval, $route) {
+
+	$route.reload();
 
 	// run the clock in the footer	
 	var tick = function() {
