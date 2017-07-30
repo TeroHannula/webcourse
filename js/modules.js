@@ -117,7 +117,7 @@ assignment_module.controller("mainCtrl", ['$scope', '$interval', function($scope
 	}
 
 	// form sending functions
-/*
+
 	$scope.formSent = false;
 
 	$scope.genders = ["male", "female", "twisted"];
@@ -136,5 +136,5 @@ assignment_module.controller("mainCtrl", ['$scope', '$interval', function($scope
 	$scope.isFormSent = function() {
 		return $scope.formSent;
 	}
-*/
+
 }]);

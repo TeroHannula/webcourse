@@ -2,9 +2,8 @@
 
 // turns on the "scroll" text while scrolling the projects page
 var scrolled = function() {
-	console.log("scroll");
 	document.getElementById("scrolled").style.color="rgb(130,130,130)";
-	window.setTimeout(scrolledOff, 100);
+	window.setTimeout(scrolledOff, 200);
 }
 
 // turns off the "scroll" text while scrolling stops the projects page
